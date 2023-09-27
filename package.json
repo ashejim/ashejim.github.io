@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-workshop-test",
+  "version": "1.0.0",
+  "description": "Spectral by HTML5 UP\r html5up.net | @ajlkn\r Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chelsey-machin/portfolio-workshop-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chelsey-machin/portfolio-workshop-test/issues"
+  },
+  "homepage": "https://github.com/chelsey-machin/portfolio-workshop-test#readme"
+}
