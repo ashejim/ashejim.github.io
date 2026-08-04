@@ -46,14 +46,10 @@
   /* ---------- project cards ---------- */
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
   .card{
-    background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 24px 20px;
     display:flex;flex-direction:column;transition:box-shadow .15s,transform .15s,border-color .15s;
   }
   .card:hover{box-shadow:0 10px 30px rgba(30,42,64,.10);transform:translateY(-2px);border-color:#cdd8ee}
-  .card-img{width:100%;aspect-ratio:2/1;background:#fff;border-bottom:1px solid var(--line);display:block}
-  .card-img img{width:100%;height:100%;object-fit:contain;display:block}
-  .card-img.cover img{object-fit:cover}
-  .card-body{padding:22px 24px 20px;display:flex;flex-direction:column;flex-grow:1}
   .card h3{font-size:19px;color:var(--navy);font-weight:700}
   .card h3 a{color:inherit}
   .card .contrib{font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.3px}
@@ -101,43 +97,31 @@
         <div class="grid">
 
           <article class="card">
-            <div class="card-img cover"><img src="images/proj-chatbot.png" alt="Course FAQ Bot Framework — applied AI / LLM evaluation"></div>
-            <div class="card-body">
-              <h3><a href="https://github.com/ashejim/c769-capstone-bot" target="_blank" rel="noopener">Course FAQ Bot Framework</a></h3>
-              <p>A reusable, config-driven framework for turning <em>any</em> course's materials into an evaluated, privacy-safe RAG assistant — with human-in-the-loop feedback tooling and an evaluation loop. Proven end-to-end on a university capstone.</p>
-              <div class="tags"><span class="tag">RAG</span><span class="tag">LLM evaluation</span><span class="tag">privacy-by-design</span><span class="tag">Python</span></div>
-              <div class="view"><a href="https://github.com/ashejim/c769-capstone-bot" target="_blank" rel="noopener">View on GitHub →</a></div>
-            </div>
+            <h3><a href="https://github.com/ashejim/c769-capstone-bot" target="_blank" rel="noopener">Course FAQ Bot Framework</a></h3>
+            <p>A reusable, config-driven framework for turning <em>any</em> course's materials into an evaluated, privacy-safe RAG assistant — with human-in-the-loop feedback tooling and an evaluation loop. Proven end-to-end on a university capstone.</p>
+            <div class="tags"><span class="tag">RAG</span><span class="tag">LLM evaluation</span><span class="tag">privacy-by-design</span><span class="tag">Python</span></div>
+            <div class="view"><a href="https://github.com/ashejim/c769-capstone-bot" target="_blank" rel="noopener">View on GitHub →</a></div>
           </article>
 
           <article class="card">
-            <div class="card-img"><img src="images/proj-metrics.png" alt="Scatter plot: course completion vs engagement, Pearson r = -0.91"></div>
-            <div class="card-body">
-              <h3><a href="https://github.com/ashejim/wgu-metric-counterexamples" target="_blank" rel="noopener">Metric-Validity Counterexamples</a></h3>
-              <p>Monte-Carlo <em>existence proofs</em> of how a single aggregate metric can mislead across populations — a literal Simpson's paradox, throughput-driven metric deflation, and non-uniform optimal effort allocation, with symbolic verification.</p>
-              <div class="tags"><span class="tag">measurement</span><span class="tag">statistics</span><span class="tag">evaluation</span><span class="tag">Python</span></div>
-              <div class="view"><a href="https://github.com/ashejim/wgu-metric-counterexamples" target="_blank" rel="noopener">View on GitHub →</a></div>
-            </div>
+            <h3><a href="https://github.com/ashejim/wgu-metric-counterexamples" target="_blank" rel="noopener">Metric-Validity Counterexamples</a></h3>
+            <p>Monte-Carlo <em>existence proofs</em> of how a single aggregate metric can mislead across populations — a literal Simpson's paradox, throughput-driven metric deflation, and non-uniform optimal effort allocation, with symbolic verification.</p>
+            <div class="tags"><span class="tag">measurement</span><span class="tag">statistics</span><span class="tag">evaluation</span><span class="tag">Python</span></div>
+            <div class="view"><a href="https://github.com/ashejim/wgu-metric-counterexamples" target="_blank" rel="noopener">View on GitHub →</a></div>
           </article>
 
           <article class="card">
-            <div class="card-img"><img src="images/proj-caseload.png" alt="CaseloadNotes — integrates Salesforce, Outlook, and Mongoose"></div>
-            <div class="card-body">
-              <h3><a href="https://github.com/ashejim/caseload-tool" target="_blank" rel="noopener">CaseloadNotes</a></h3>
-              <p>A Windows desktop app that automates the repetitive Salesforce/Outlook workflow of running a course caseload — batch actions across filtered students, templated email/text, at-rest encryption, a test suite, and a packaged build.</p>
-              <div class="tags"><span class="tag">applied software</span><span class="tag">Python</span><span class="tag">desktop</span><span class="tag">automation</span></div>
-              <div class="view"><a href="https://github.com/ashejim/caseload-tool" target="_blank" rel="noopener">View on GitHub →</a></div>
-            </div>
+            <h3><a href="https://github.com/ashejim/caseload-tool" target="_blank" rel="noopener">CaseloadNotes</a></h3>
+            <p>A Windows desktop app that automates the repetitive Salesforce/Outlook workflow of running a course caseload — batch actions across filtered students, templated email/text, at-rest encryption, a test suite, and a packaged build.</p>
+            <div class="tags"><span class="tag">applied software</span><span class="tag">Python</span><span class="tag">desktop</span><span class="tag">automation</span></div>
+            <div class="view"><a href="https://github.com/ashejim/caseload-tool" target="_blank" rel="noopener">View on GitHub →</a></div>
           </article>
 
           <article class="card">
-            <div class="card-img"><img src="images/proj-circlepack.jpg" alt="A circle packing rendered by CirclePack"></div>
-            <div class="card-body">
-              <h3><a href="https://github.com/ashejim/CirclePack" target="_blank" rel="noopener">CirclePack</a> <span class="contrib">· contributor</span></h3>
-              <p>Open-source research software for the creation, manipulation, and display of circle packings (in the sense of Thurston) — tied to my published mathematics on generalized branching.</p>
-              <div class="tags"><span class="tag">math research</span><span class="tag">Java</span><span class="tag">open source</span></div>
-              <div class="view"><a href="https://github.com/ashejim/CirclePack" target="_blank" rel="noopener">View on GitHub →</a></div>
-            </div>
+            <h3><a href="https://github.com/ashejim/CirclePack" target="_blank" rel="noopener">CirclePack</a> <span class="contrib">· contributor</span></h3>
+            <p>Open-source research software for the creation, manipulation, and display of circle packings (in the sense of Thurston) — tied to my published mathematics on generalized branching.</p>
+            <div class="tags"><span class="tag">math research</span><span class="tag">Java</span><span class="tag">open source</span></div>
+            <div class="view"><a href="https://github.com/ashejim/CirclePack" target="_blank" rel="noopener">View on GitHub →</a></div>
           </article>
 
           <!-- Add after pushing the eval-benchmark repo:
