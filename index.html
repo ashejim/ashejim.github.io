@@ -1,120 +1,162 @@
-<!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<!-- Replace this with your name -->
-		<title>Your Name Here</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="landing is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jim Ashe, PhD — Applied AI, LLM Evaluation & Measurement</title>
+<meta name="description" content="Mathematician (PhD) and 20-year educator building and evaluating applied AI systems — LLM evaluation, reasoning-data quality, and measurement.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23263654'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%239fc0f2' text-anchor='middle'%3EJA%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --navy:#263654; --navy-deep:#1b2540; --ink:#1c2431; --muted:#5b667a;
+    --accent:#31589a; --accent-soft:#5b7fbf; --line:#e5e9f0; --bg:#f7f9fc; --card:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:var(--bg); line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+  /* ---------- hero ---------- */
+  .hero{
+    background:linear-gradient(135deg,#263654 0%,#1b2540 55%,#141c30 100%);
+    color:#f4f6fb; padding:76px 0 66px;
+  }
+  .hero h1{font-size:clamp(34px,6vw,52px);font-weight:800;letter-spacing:-1px;line-height:1.05}
+  .hero .role{color:#9fc0f2;font-weight:600;font-size:clamp(17px,2.6vw,21px);margin-top:10px}
+  .hero p{color:#cdd8ee;font-size:clamp(16px,2.3vw,19px);margin-top:20px;max-width:680px}
+  .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .links a{
+    color:#eaf1fc;border:1.5px solid rgba(159,192,242,.5);background:rgba(120,150,210,.14);
+    padding:9px 17px;border-radius:999px;font-size:15px;font-weight:600;
+  }
+  .links a:hover{background:rgba(120,150,210,.28);text-decoration:none}
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<!-- Replace this with your name -->
-						<h1><a href="index.html">Your Name</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="index.html/#one">About Me</a></li>
-											<li><a href="index.html/#two">Portfolio</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+  /* ---------- sections ---------- */
+  section{padding:56px 0}
+  h2{font-size:26px;font-weight:800;color:var(--navy);letter-spacing:-.3px}
+  h2 .rule{display:block;width:52px;height:4px;background:var(--accent-soft);border-radius:2px;margin-top:10px}
+  .lead{color:var(--muted);margin-top:14px;max-width:720px}
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<!-- Replace this with your name -->
-							<h2>Your Name</h2>
-							<!-- Replace this with your title -->
-							<p>Software Engineer<br />
-						</div>
-						<a href="#one" class="more scrolly">About Me</a>
-					</section>
+  /* ---------- project cards ---------- */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 24px 20px;
+    display:flex;flex-direction:column;transition:box-shadow .15s,transform .15s,border-color .15s;
+  }
+  .card:hover{box-shadow:0 10px 30px rgba(30,42,64,.10);transform:translateY(-2px);border-color:#cdd8ee}
+  .card h3{font-size:19px;color:var(--navy);font-weight:700}
+  .card h3 a{color:inherit}
+  .card .contrib{font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.3px}
+  .card p{color:#3d4759;font-size:15px;margin-top:10px;flex-grow:1}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+  .tag{font-size:12.5px;font-weight:600;color:var(--accent);background:#eef3fb;
+       border:1px solid #dbe6f6;padding:4px 11px;border-radius:999px}
+  .card .view{margin-top:16px;font-size:14.5px;font-weight:600}
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<!-- Replace this with your professional bio -->
-								<h2>A software engineer looking to impress<br />
-								More of your tagline/bio</h2>
-								<p>Can put in work experience or a larger paragraph about yourself here.</p>
-							</header>
-							<!-- These are decorative, can use them to represent stuff you work with; options on font awesome icons -->
-							<ul class="icons major">
-								<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
-							</ul>
-						</div>
-					</section>
-				<!-- Two -->
-					<section id="two" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>My Work</h2>
-								<p>Perfect spot for some example projects/work</p>
-							</header>
-							<!-- Each of the <li></li> code blocks should be for one project.
-								A separate .html file should be made for each project page so the user can be taken there when they click on the project title
-							-->
-							<ul class="features">
-								<li class="icon fa-paper-plane">
-									<a href="project1.html"<h3>Project 1</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-paper-plane">
-									<a href="project2.html"<h3>Project 2</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
+  /* ---------- about ---------- */
+  .about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about ul{list-style:none;margin-top:20px;display:grid;gap:12px}
+  .about li{padding-left:26px;position:relative;color:#37414f}
+  .about li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:9px;
+    background:var(--accent-soft);border-radius:50%}
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<!-- Replace all of the #'s with your own social media links; delete any irrelevant ones -->
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<!-- Replace this with your name -->
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+  /* ---------- footer ---------- */
+  footer{background:#141c30;color:#aebbd6;text-align:center;padding:40px 24px;font-size:14.5px}
+  footer a{color:#9fc0f2}
 
-			</div>
+  @media(max-width:680px){.grid{grid-template-columns:1fr}section{padding:44px 0}}
+</style>
+</head>
+<body>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <header class="hero">
+    <div class="wrap">
+      <h1>Jim Ashe, PhD</h1>
+      <div class="role">Applied AI · LLM Evaluation · Measurement</div>
+      <p>Mathematician and 20-year educator building and evaluating applied AI systems. I work at the intersection of <strong style="color:#eaf1fc">LLM evaluation, reasoning-data quality, and measurement</strong> — designing rubrics and objective quality gates, debugging retrieval, and thinking rigorously about how AI and education systems are measured.</p>
+      <nav class="links">
+        <a href="mailto:drjimashe@proton.me">Email</a>
+        <a href="https://www.linkedin.com/in/james-ashe-95851a156/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/ashejim" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=raxuPegAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </nav>
+    </div>
+  </header>
 
-	</body>
+  <main>
+    <section id="work">
+      <div class="wrap">
+        <h2>Selected work<span class="rule"></span></h2>
+        <p class="lead">A few projects that show how I build and evaluate AI and data systems — with an emphasis on measurement, correctness, and responsible data handling.</p>
+        <div class="grid">
+
+          <article class="card">
+            <h3><a href="https://github.com/ashejim/c769-capstone-bot" target="_blank" rel="noopener">Course FAQ Bot Framework</a></h3>
+            <p>A reusable, config-driven framework for turning <em>any</em> course's materials into an evaluated, privacy-safe RAG assistant — with human-in-the-loop feedback tooling and an evaluation loop. Proven end-to-end on a university capstone.</p>
+            <div class="tags"><span class="tag">RAG</span><span class="tag">LLM evaluation</span><span class="tag">privacy-by-design</span><span class="tag">Python</span></div>
+            <div class="view"><a href="https://github.com/ashejim/c769-capstone-bot" target="_blank" rel="noopener">View on GitHub →</a></div>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/ashejim/wgu-metric-counterexamples" target="_blank" rel="noopener">Metric-Validity Counterexamples</a></h3>
+            <p>Monte-Carlo <em>existence proofs</em> of how a single aggregate metric can mislead across populations — a literal Simpson's paradox, throughput-driven metric deflation, and non-uniform optimal effort allocation, with symbolic verification.</p>
+            <div class="tags"><span class="tag">measurement</span><span class="tag">statistics</span><span class="tag">evaluation</span><span class="tag">Python</span></div>
+            <div class="view"><a href="https://github.com/ashejim/wgu-metric-counterexamples" target="_blank" rel="noopener">View on GitHub →</a></div>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/ashejim/caseload-tool" target="_blank" rel="noopener">CaseloadNotes</a></h3>
+            <p>A Windows desktop app that automates the repetitive Salesforce/Outlook workflow of running a course caseload — batch actions across filtered students, templated email/text, at-rest encryption, a test suite, and a packaged build.</p>
+            <div class="tags"><span class="tag">applied software</span><span class="tag">Python</span><span class="tag">desktop</span><span class="tag">automation</span></div>
+            <div class="view"><a href="https://github.com/ashejim/caseload-tool" target="_blank" rel="noopener">View on GitHub →</a></div>
+          </article>
+
+          <article class="card">
+            <h3><a href="https://github.com/ashejim/CirclePack" target="_blank" rel="noopener">CirclePack</a> <span class="contrib">· contributor</span></h3>
+            <p>Open-source research software for the creation, manipulation, and display of circle packings (in the sense of Thurston) — tied to my published mathematics on generalized branching.</p>
+            <div class="tags"><span class="tag">math research</span><span class="tag">Java</span><span class="tag">open source</span></div>
+            <div class="view"><a href="https://github.com/ashejim/CirclePack" target="_blank" rel="noopener">View on GitHub →</a></div>
+          </article>
+
+          <!-- Add after pushing the eval-benchmark repo:
+          <article class="card">
+            <h3><a href="https://github.com/ashejim/eval-benchmark" target="_blank" rel="noopener">Math-Reasoning Eval Benchmark</a></h3>
+            <p>An original benchmark pairing an objective final-answer quality gate with rubric-based partial credit and an LLM-as-judge layer, for grading mathematical reasoning.</p>
+            <div class="tags"><span class="tag">LLM evaluation</span><span class="tag">benchmarks</span><span class="tag">Python</span></div>
+            <div class="view"><a href="https://github.com/ashejim/eval-benchmark" target="_blank" rel="noopener">View on GitHub →</a></div>
+          </article>
+          -->
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap">
+        <h2>Background<span class="rule"></span></h2>
+        <ul>
+          <li><strong>PhD, Mathematics</strong> — University of Tennessee (advisor: Ken Stephenson).</li>
+          <li>Published in <em>The Journal of Analysis</em> · <a href="https://arxiv.org/abs/1607.03404" target="_blank" rel="noopener">arXiv:1607.03404</a> · <a href="https://scholar.google.com/citations?user=raxuPegAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</li>
+          <li>20+ years teaching mathematics, computer science, and data analytics to a large, diverse online student body.</li>
+          <li>Authored competency-based performance assessments — with evidence-to-objective mapping, separable rubrics, and objective quality gates — for WGU's BS in AI Engineering.</li>
+          <li>Focused on <strong>model evaluation, reasoning-data design, and assessment</strong>. Always happy to talk shop about eval methodology.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Jim Ashe, PhD · <a href="mailto:drjimashe@proton.me">drjimashe@proton.me</a> ·
+      <a href="https://github.com/ashejim" target="_blank" rel="noopener">github.com/ashejim</a>
+    </div>
+  </footer>
+
+</body>
 </html>
